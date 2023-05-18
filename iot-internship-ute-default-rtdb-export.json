@@ -1,0 +1,24 @@
+{
+  "IoT Internship": {
+    "BULB_01": "OFF",
+    "BULB_02": "ON",
+    "BULB_03": "ON",
+    "BULB_04": "ON",
+    "doam": 0,
+    "nhietdo": 0
+  },
+  "TT_IoT": {
+    "Air Conditioner": "ON",
+    "CO2 Concentrations": 0.01,
+    "Camera": "OFF",
+    "Gas Concentrations": 0.5,
+    "Humidity": 80,
+    "LAMP_01": "ON",
+    "LAMP_02": "ON",
+    "LAMP_03": "ON",
+    "LAMP_04": "OFF",
+    "TV": "ON",
+    "Temperature": 28,
+    "Wifi": "OFF"
+  }
+}

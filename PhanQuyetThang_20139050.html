@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!----======== CSS ======== -->
+    <link rel="stylesheet" href="test.css">
+    
+    <!----===== Boxicons CSS ===== -->
+    <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
+    
+    <!--<title>Dashboard Sidebar Menu</title>--> 
+</head>
+<body>
+    <nav class="sidebar close">
+        <header>
+            <div class="image-text">
+                <span class="image">
+                    <img src="https://static-00.iconduck.com/assets.00/openai-icon-505x512-pr6amibw.png" alt="Logo">
+                </span>
+
+                <div class="text logo-text">
+                    <span class="name">IoT INTERNSHIP</span>
+                    <span class="profession">HCMUTE</span>
+                </div>
+            </div>
+
+            <i class='bx bx-chevron-right toggle'></i>
+        </header>
+
+
+<!-- ============================= -->
+        <div class="menu-bar">
+            <div class="menu">
+
+                <li class="search-box">
+                    <i class='bx bx-search icon'></i>
+                    <input type="text" placeholder="Search...">
+                </li>
+            </div>
+            
+            <div class="tab">
+                <li class="nav-link">
+                    <a href="#">
+                        <i class='bx bx-home-alt icon' ></i>
+                        <button class="tablinks" onclick="openCity(event, 'Living_Room')">
+                            <p>Living Room</p>
+                        </button>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">
+                        <i class='bx bx-knife icon'></i>
+                        <button class="tablinks" onclick="openCity(event, 'Kitchen')">
+                            <p>Kitchen</p>
+                        </button>
+                    </a>
+                </li>
+                <li class="nav-link">
+                    <a href="#">
+                        <i class='bx bx-bed icon' ></i>
+                        <button class="tablinks" onclick="openCity(event, 'Bedroom')">
+                            <p>Bedroom</p>
+                        </button>
+                    </a>
+                </li>
+            </div>
+              
+            <div class="bottom-content">
+                <li class="">
+                    <a href="#">
+                        <i class='bx bx-log-out icon' ></i>
+                        <span class="text nav-text">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <div class="sun-moon">
+                        <i class='bx bx-moon icon moon'></i>
+                        <i class='bx bx-sun icon sun'></i>
+                    </div>
+                    <span class="mode-text text">Dark mode</span>
+
+                    <div class="toggle-switch">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </div>
+        </div>
+    </nav>
+
+<!-- ============================ -->
+    <section class="home">
+        <div class="text">
+        <p>Smarthome Dashboard</p>
+        <p id="current-time">12:00:00</p>
+        </div>
+
+        <div class="control">
+            <div id="Living_Room" class="tabcontent">
+              <div class="parent-container" >
+                <div class="device-control">
+                    <div class="device2">
+                        <h2>Temperature:   <span id="Temperature" style="color: red; font-size: 30px;">None</span> </h2>
+                        <i class='bx bx-sun'></i>
+                    </div>
+                    <div class="device2">
+                        <h2>Humidity:   <span id="Humidity" style="color: blue; font-size: 30px;">None</span> </h2>
+                        <i class='bx bx-droplet' ></i>
+                    </div>
+                    <div class="device2">
+                        <h2>Gas: <span id="Gas" style=" color: #B6292B; font-size: 30px;">None</span> </h2>
+                        <i class='bx bxs-hot'></i>
+                    </div>
+                    <div class="device2">
+                        <h2>CO2: <span id="CO2 Concentrations" style="color: #976D00; font-size: 30px;">None</span> </h2>
+                        <i class='bx bx-leaf'></i>
+                    </div>
+                </div>
+                <div class="device-control"> 
+                  <div class="device">
+                    <p>Lamp 1</p>
+                    <i class='bx bx-bulb'></i>
+                    <label class="switch">
+                      <input type="checkbox" id="toggle-checkbox1" checked>
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+                  <div class="device">
+                    <p>Lamp 2</p>
+                    <i class='bx bx-bulb'></i>
+                    <label class="switch">
+                      <input type="checkbox" id="toggle-checkbox2" checked>
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+                  <div class="device">
+                    <p>Lamp 3</p>
+                    <i class='bx bx-bulb'></i>
+                    <label class="switch">
+                      <input type="checkbox" id="toggle-checkbox3" checked>
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+                  <div class="device">
+                    <p>Lamp 4</p>
+                    <i class='bx bx-bulb'></i>
+                    <label class="switch">
+                      <input type="checkbox" id="toggle-checkbox4" checked>
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+                </div>
+                
+
+                <div class="device-control">
+                  <div class="device">
+                    <p>Air Conditioner</p>
+                    <i class='bx bx-wind' ></i>
+                    <label class="switch">
+                      <input type="checkbox" id="toggle-checkbox5" checked>
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+                  <div class="device">
+                    <p>TV</p>
+                    <i class='bx bx-tv' ></i>
+                    <label class="switch">
+                      <input type="checkbox" id="toggle-checkbox6" checked>
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+                  <div class="device">
+                    <p>Wifi</p>
+                    <i class='bx bx-wifi' ></i>
+                    <label class="switch">
+                      <input type="checkbox" id="toggle-checkbox7" checked>
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+                  <div class="device">
+                    <p>Camera</p>
+                    <i class='bx bx-camera'></i>
+                    <label class="switch">
+                      <input type="checkbox" id="toggle-checkbox8" checked>
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+                </div>
+                <footer>
+                  <div class="footer-part">
+                    <p id="text">&copy; 2023 MyWebsite. All rights reserved.</p>
+                    <p id="text2">PHAN QUYET THANG - 20139050</p>
+                  </div>
+                </footer>
+              </div>
+            </div>
+
+            <div id="Kitchen" class="tabcontent">
+              <div class="parent-container">
+                <div class="device-control">
+                  <div class="device">
+                    <i class='bx bx-bulb'></i>
+                    <label class="switch">
+                      <input type="checkbox" checked>
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+                  <div class="device">
+                    <i class='bx bx-bulb'></i>
+                    <label class="switch">
+                      <input type="checkbox" checked>
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+                  <div class="device">
+                    <i class='bx bx-bulb'></i>
+                    <label class="switch">
+                      <input type="checkbox" checked>
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+                  <div class="device">
+                    <i class='bx bx-bulb'></i>
+                    <label class="switch">
+                      <input type="checkbox" checked>
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="device-control">
+                  <div class="device">
+                    <i class='bx bx-wind' ></i>
+                    <label class="switch">
+                      <input type="checkbox" checked>
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+                  <div class="device">
+                    <i class='bx bx-wind' ></i>
+                    <label class="switch">
+                      <input type="checkbox" checked>
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+                  <div class="device">
+                    <i class='bx bx-wind' ></i>
+                    <label class="switch">
+                      <input type="checkbox" checked>
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+                  <div class="device">
+                    <i class='bx bx-wind' ></i>
+                    <label class="switch">
+                      <input type="checkbox" checked>
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div id="Bedroom" class="tabcontent">
+              <div class="parent-container">
+                <div class="device-control">
+                  <div class="device">
+                    <i class='bx bx-bulb'></i>
+                    <label class="switch">
+                      <input type="checkbox" checked>
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+                  <div class="device">
+                    <i class='bx bx-bulb'></i>
+                    <label class="switch">
+                      <input type="checkbox" checked>
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+                  <div class="device">
+                    <i class='bx bx-bulb'></i>
+                    <label class="switch">
+                      <input type="checkbox" checked>
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+                  <div class="device">
+                    <i class='bx bx-bulb'></i>
+                    <label class="switch">
+                      <input type="checkbox" checked>
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+                </div>
+
+                <div class="device-control">
+                  <div class="device">
+                    <i class='bx bx-wind' ></i>
+                    <label class="switch">
+                      <input type="checkbox" checked>
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+                  <div class="device">
+                    <i class='bx bx-wind' ></i>
+                    <label class="switch">
+                      <input type="checkbox" checked>
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+                  <div class="device">
+                    <i class='bx bx-wind' ></i>
+                    <label class="switch">
+                      <input type="checkbox" checked>
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+                  <div class="device">
+                    <i class='bx bx-wind' ></i>
+                    <label class="switch">
+                      <input type="checkbox" checked>
+                      <span class="slider"></span>
+                    </label>
+                  </div>
+                </div>
+              </div>
+            </div>  
+        </div>
+    </div>
+    </section>
+
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-database.js"></script>
+    <script src="test2.js"></script>
+
+</body>
+</html>
